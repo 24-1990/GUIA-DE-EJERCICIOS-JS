@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="calcular temperatura"></script>
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<script>
+    var menu = prompt("1. Grados Celsius a Fahrenheit \n2. Evaluar tipo de Temperatura \n3. Grados Fahrenheit a Celsius");
+
+menu == 1 ? celsiusFahrenheit(prompt("Grados Celsius")) : false;
+menu == 2 ? evaluarTemperatura(prompt("Grados Fahrenheit")) : false;
+menu == 3 ? fahrenheitCelsius(prompt("Grados Fahrenheit")) : false;
+
+function celsiusFahrenheit(grados) {
+   
+    result = grados + 'º C es igual a ' + (grados * (9 / 5) + 32) + 'º F';
+
+    console.log(result); 
+    document.write(result); 
+}
+
+function evaluarTemperatura(grados) {
+ 
+    
+   grados >=14 && grados<=32 ? result = grados + 'ºF es Temperatura baja' : false;
+   grados >=32 && grados<=68 ? result = grados + 'ºF es Temperatura adecuada' : false;
+   grados >=68 && grados<=96 ? result = grados + 'ºF es Temperatura alta' : false;
+   grados <14 || grados>96 ? result = grados + 'º es Temperatura desconocida' : false;
+
+   console.log(result); 
+   document.write(result); 
+}
+
+function fahrenheitCelsius(grados) {
+ 
+    result = grados + 'º F es igual a ' + ((grados - 32) * (5/9)) + 'º C';
+    
+    console.log(result); 
+    document.write(result); 
+}
+</script>
+<body>
+
+</body>
+</html>
